@@ -47,7 +47,7 @@
   </style>
 <!-- END: Styles -->
 <style>
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
     section[id], footer[id] { scroll-margin-top: 6rem; }
     a, button { -webkit-tap-highlight-color: transparent; }
     a:focus-visible, button:focus-visible {
@@ -78,7 +78,7 @@
       left: 1rem;
       right: 1rem;
       z-index: 60;
-      display: grid;
+      display: none;
       gap: .25rem;
       padding: .5rem;
       border: 1px solid rgba(229, 169, 30, .25);
@@ -91,6 +91,7 @@
       transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
     }
     .mobile-nav-panel.is-open {
+      display: grid;
       opacity: 1;
       transform: translateY(0);
       visibility: visible;
@@ -129,16 +130,26 @@
       }
       .reveal-item { opacity: 1; transform: none; }
     }
+    .text-stone-900, .text-stone-950, .text-stone-800 { color: #292524 !important; }
+    .text-stone-700, .text-stone-600 { color: #57534e !important; }
+    .text-stone-500, .text-stone-400 { color: #78716c !important; }
+    .text-stone-100, .text-white { color: #fff !important; }
+    .text-stone-300, .text-emerald-100, [class~="text-emerald-100/90"] { color: #d6d3d1 !important; }
+    .text-emerald-800, [class~="text-[#0F3D2E]"] { color: #0f3d2e !important; }
+    .text-emerald-900 { color: #0f3d2e !important; }
+    .text-amber-300, .text-amber-400, [class~="text-[#E5A91E]"] { color: #e5a91e !important; }
+    .text-amber-800 { color: #8b5d00 !important; }
+    footer .text-stone-400 { color: #d6d3d1 !important; }
   </style>
 </head>
 <body class="bg-[#FAF6EC] text-stone-800 font-sans antialiased selection:bg-amber-200 selection:text-emerald-950">
 <!-- BEGIN: MainHeader -->
 <header class="sticky top-0 z-50 bg-[#0F3D2E] text-stone-100 shadow-md border-b border-emerald-900/50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
+<div class="flex items-center justify-between h-20 sm:h-24">
 <!-- Logo Branding -->
 <a class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-lg p-1" href="#home">
-<img alt="JSM Millet Tiffins and Ragimuddha Logo" class="h-14 w-auto object-contain rounded drop-shadow-sm transition-transform group-hover:scale-105 duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3JMNeaWDSBB8y73J3rx6fzr3kTu3y7V8jwPkdVEeh4WRWxdjUwFAnmn65oxTNH4ZZbERWrIKvFnBziAB85OhD0yR-K9QY-ADEeq3zJhO0S2oohk_O3Vb8YtzqURpGgdL0R9obX2xyapW5OSk7JthyrlpE_HGFNNpvg17pQJ_gR1Wh4OX-71n4no1uPAFpYijiGwMfTIaPoU-SqAzxfwfuvCkPF8OwD9ya88zmLur4I-SHCFdCTreNERsAUIBmlsLxwA"/>
+<img alt="JSM Millet Tiffins and Ragimuddha Logo" class="h-16 sm:h-20 w-auto object-contain rounded drop-shadow-sm transition-transform group-hover:scale-105 duration-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3JMNeaWDSBB8y73J3rx6fzr3kTu3y7V8jwPkdVEeh4WRWxdjUwFAnmn65oxTNH4ZZbERWrIKvFnBziAB85OhD0yR-K9QY-ADEeq3zJhO0S2oohk_O3Vb8YtzqURpGgdL0R9obX2xyapW5OSk7JthyrlpE_HGFNNpvg17pQJ_gR1Wh4OX-71n4no1uPAFpYijiGwMfTIaPoU-SqAzxfwfuvCkPF8OwD9ya88zmLur4I-SHCFdCTreNERsAUIBmlsLxwA"/>
 </a>
 <!-- Desktop Navigation Links -->
 <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
@@ -215,14 +226,13 @@
 <div class="lg:col-span-5 flex justify-center">
 <div class="relative max-w-md w-full">
 <!-- Golden accent halo ring -->
-<div class="absolute -inset-2 bg-gradient-to-tr from-amber-500 to-emerald-500 rounded-3xl blur-lg opacity-30"></div>
 <div class="relative bg-emerald-950 p-3 rounded-2xl border border-emerald-700/60 shadow-2xl overflow-hidden group">
-<img alt="Crispy golden Ragi Dosa served on fresh banana leaf with traditional chutneys and podi" class="w-full h-[460px] object-cover rounded-xl transition duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNlR0iWQplPwLOYp51kQMhpJ9J5cT8fw9QldYlDRO_lh-zR8JYJPLLmuLCUJCL0nPx8dLMNCq-nzIdwM9GA6YjLSeTQ8dbhjWwj-epEjJVv-7r0x6EWRpsYfny1T7UiOYKSXQiTF18Bp6naSbwUWAD83a0cyzhdUjd-dcI8s3xUDD2hzuT9U6FPsp767BWSmZP0aRJ5okJfbgFfLmN2LiKmH7Ksj535jf0Epa5cn2QeXroiAKmN2zT4yvUcxTlmks49g"/>
-<div class="absolute bottom-6 left-6 right-6 bg-[#0F3D2E]/90 backdrop-blur-md p-4 rounded-xl border border-emerald-600/40 text-left">
+<img alt="Crispy golden Ragi Dosa served on fresh banana leaf with traditional chutneys and podi" class="w-full h-[460px] object-cover object-center rounded-xl transition duration-500 group-hover:scale-105" src="./public/images/menu/crispy-ghee-ragi-dosa.png"/>
+<div class="absolute bottom-3 left-3 right-3 bg-[#0F3D2E]/90 backdrop-blur-md p-3 rounded-xl border border-emerald-600/40 text-left">
 <div class="flex items-center justify-between">
 <div>
-<p class="text-xs font-semibold text-amber-300 uppercase tracking-wider">Signature Serving</p>
-<h3 class="text-base font-bold text-white">Crisp Ghee Ragi Dosa</h3>
+<p class="text-xs font-semibold text-amber-300">Signature serving</p>
+<h2 class="text-base font-bold text-white">Crisp Ghee Ragi Dosa</h2>
 </div>
 <span class="text-lg font-bold text-amber-400">₹50</span>
 </div>
@@ -294,7 +304,7 @@
 <section class="py-16 bg-[#F3EBD8]" id="categories">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center max-w-2xl mx-auto mb-12">
-<span class="text-xs font-bold tracking-widest text-[#0F3D2E] uppercase">Curated Offerings</span>
+<span class="text-xs font-bold tracking-widest text-[#0F3D2E]">Curated offerings</span>
 <h2 class="text-3xl font-serif font-bold text-stone-900 mt-1">Our Culinary Categories</h2>
 <div class="w-16 h-1 bg-[#E5A91E] mx-auto mt-3 rounded-full"></div>
 </div>
@@ -306,7 +316,7 @@
 <h3 class="text-lg font-bold text-stone-900 mb-2">Ragi Specials</h3>
 <p class="text-xs text-stone-600 mb-4 leading-relaxed">Crispy dosas, soft idlis, and fluffy steamed ragi tiffins packed with calcium.</p>
 </div>
-<span class="inline-block py-1 px-3 bg-amber-50 text-amber-800 font-bold text-xs rounded-full border border-amber-200">
+<span class="inline-block min-h-10 py-2 px-4 bg-amber-100 text-amber-800 font-bold text-sm rounded-full border border-amber-300">
               Starts ₹30
             </span>
 </div>
@@ -317,7 +327,7 @@
 <h3 class="text-lg font-bold text-stone-900 mb-2">Millet Specials</h3>
 <p class="text-xs text-stone-600 mb-4 leading-relaxed">Foxtail, Kodo, and Little millet pongal, upma, and seasonal tiffins.</p>
 </div>
-<span class="inline-block py-1 px-3 bg-amber-50 text-amber-800 font-bold text-xs rounded-full border border-amber-200">
+<span class="inline-block min-h-10 py-2 px-4 bg-amber-100 text-amber-800 font-bold text-sm rounded-full border border-amber-300">
               Starts ₹45
             </span>
 </div>
@@ -328,7 +338,7 @@
 <h3 class="text-lg font-bold text-stone-900 mb-2">Traditional Tiffins</h3>
 <p class="text-xs text-stone-600 mb-4 leading-relaxed">Cast-iron grilled multigrain utappam, pesarattu, and savory roasted crêpes.</p>
 </div>
-<span class="inline-block py-1 px-3 bg-amber-50 text-amber-800 font-bold text-xs rounded-full border border-amber-200">
+<span class="inline-block min-h-10 py-2 px-4 bg-amber-100 text-amber-800 font-bold text-sm rounded-full border border-amber-300">
               Starts ₹50
             </span>
 </div>
@@ -339,7 +349,7 @@
 <h3 class="text-lg font-bold text-stone-900 mb-2">Garelu &amp; Snacks</h3>
 <p class="text-xs text-stone-600 mb-4 leading-relaxed">Hot crunchy sprouted green gram garelu and spiced shallow-fried punugulu.</p>
 </div>
-<span class="inline-block py-1 px-3 bg-amber-50 text-amber-800 font-bold text-xs rounded-full border border-amber-200">
+<span class="inline-block min-h-10 py-2 px-4 bg-amber-100 text-amber-800 font-bold text-sm rounded-full border border-amber-300">
               Starts ₹40
             </span>
 </div>
@@ -350,7 +360,7 @@
 <h3 class="text-lg font-bold text-stone-900 mb-2">Sangati &amp; Java</h3>
 <p class="text-xs text-stone-600 mb-4 leading-relaxed">Wholesome Rayalaseema Ragi Muddha served with spicy natukodi or dal pulusu &amp; cooling java.</p>
 </div>
-<span class="inline-block py-1 px-3 bg-amber-50 text-amber-800 font-bold text-xs rounded-full border border-amber-200">
+<span class="inline-block min-h-10 py-2 px-4 bg-amber-100 text-amber-800 font-bold text-sm rounded-full border border-amber-300">
               Starts ₹40
             </span>
 </div>
@@ -380,7 +390,7 @@
 <!-- Dish 1: Ragi Dosa -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Crispy golden Ghee Ragi Dosa served on a fresh banana leaf with traditional chutneys and podi" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNlR0iWQplPwLOYp51kQMhpJ9J5cT8fw9QldYlDRO_lh-zR8JYJPLLmuLCUJCL0nPx8dLMNCq-nzIdwM9GA6YjLSeTQ8dbhjWwj-epEjJVv-7r0x6EWRpsYfny1T7UiOYKSXQiTF18Bp6naSbwUWAD83a0cyzhdUjd-dcI8s3xUDD2hzuT9U6FPsp767BWSmZP0aRJ5okJfbgFfLmN2LiKmH7Ksj535jf0Epa5cn2QeXroiAKmN2zT4yvUcxTlmks49g"/>
+<img alt="Crispy golden ghee ragi dosa served with traditional chutneys" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/crispy-ghee-ragi-dosa.png"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹50
               </span>
@@ -404,7 +414,7 @@
 <!-- Dish 2: Ragi Utappam -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Onion Ragi Utappam with podi" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA34cV36YIVMvQJ8fW87gQz6xpdt4xrFMSzG9Q-bBYZqGI5NIBMWc4wlfWW7t0xI6jjF8q1kCqTsJXtZ6AteXxTjbz9Yn-a3rpJ2eAE7fgwYFwN79mMkaSVj0NQd_ELTRcMQ8qI9lyZbTCMehHUF3owlrlexaPcbH3uO5FAMABeCCH4DJ86e8CTveF8SIIijnLBWaScNljPnvXHWseEk3FeAZYQxc32KpJwBJBxDzvDzd4bXX0F-9RfPajTgd0zoXeQ0Q"/>
+<img alt="Onion Ragi Utappam with podi" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/onion-ragi-utappam.jpeg"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹70
               </span>
@@ -428,7 +438,7 @@
 <!-- Dish 3: Sprouts Garelu -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Crispy mung sprout garelu served on a banana leaf with chutney" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="/images/menu/Mung%20sprout%20garelu.jpeg"/>
+<img alt="Crispy mung sprout garelu served on a banana leaf with chutney" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/mung-sprout-garelu.jpeg"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹50
               </span>
@@ -452,7 +462,7 @@
 <!-- Dish 4: Guntaponganalu -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Crispy millet ponganalu served on a banana leaf with chutneys and podi" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="/images/menu/Crispy%20Millet%20Ponganalu.jpeg"/>
+<img alt="Crispy millet ponganalu served on a banana leaf with chutneys and podi" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/crispy-millet-ponganalu.jpeg"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹40
               </span>
@@ -476,7 +486,7 @@
 <!-- Dish 5: Ragi Mudda -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Traditional ragi mudda served with pulusu, onions, and lime on a banana leaf" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="/images/menu/Ragi%20mudda%20%26%20pulusu.jpeg"/>
+<img alt="Traditional ragi mudda served with pulusu, onions, and lime on a banana leaf" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/ragi-mudda-pulusu.jpeg"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹80
               </span>
@@ -500,7 +510,7 @@
 <!-- Dish 6: Foxtail Pongal -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Foxtail millet pongal with cashews served on a banana leaf" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="/images/menu/Foxtail%20(Korra)%20Millet%20Pongal.jpeg"/>
+<img alt="Foxtail millet pongal with cashews served on a banana leaf" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/foxtail-millet-pongal.jpeg"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹50
               </span>
@@ -524,7 +534,7 @@
 <!-- Dish 7: Soft Ragi Idly -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Soft ragi idlies served on a banana leaf with groundnut chutney, red chili podi, and sambar" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="/images/menu/Soft%20Millet%20ragi%20iddly.jpeg"/>
+<img alt="Soft millet idlies served on a banana leaf with chutneys" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/soft-millet-ragi-idli.png"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹40
               </span>
@@ -548,7 +558,7 @@
 <!-- Dish 8: Crispy Ragi Pasara Dosa -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Crispy ragi pasara dosa served with traditional chutneys on a banana leaf" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="/images/menu/Ragi%20pesara%20dosa.jpeg"/>
+<img alt="Crispy ragi pasara dosa served with traditional chutneys on a banana leaf" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/ragi-pesara-dosa.png"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹40
               </span>
@@ -572,7 +582,7 @@
 <!-- Dish 9: Traditional Ragi Ambali -->
 <article class="bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-sm hover:shadow-md transition duration-200 flex flex-col">
 <div class="relative h-56 overflow-hidden bg-stone-100">
-<img alt="Cool traditional ragi ambali garnished with herbs and green chili" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="/images/menu/Ragi%20Ambali.jpeg"/>
+<img alt="Cool traditional ragi ambali garnished with herbs and green chili" class="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" src="./public/images/menu/ragi-ambali.jpeg"/>
 <span class="absolute top-3 right-3 bg-[#E5A91E] text-stone-950 font-extrabold text-sm px-3 py-1 rounded-full shadow">
                 ₹20
               </span>
@@ -709,7 +719,7 @@
 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-1">Our Hyderabad Outlets</h2>
 <p class="text-stone-600 text-sm mt-2">Dine-in fresh on traditional banana leaves or order takeaway</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <!-- Branch 1 -->
 <div class="bg-white rounded-2xl p-7 shadow-sm border border-stone-200 flex flex-col justify-between hover:shadow-md transition">
 <div class="space-y-4">
@@ -730,8 +740,8 @@
 </div>
 </div>
 <div class="pt-6 mt-6 border-t border-stone-100">
-<a class="w-full inline-block text-center py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg bg-emerald-50 text-[#0F3D2E] border border-emerald-300 hover:bg-emerald-100 transition" href="https://www.google.com/maps/search/Opposite+Viswanadha+Garden+JPN+Nagar+Miyapur+Hyderabad+500049" rel="noopener noreferrer" target="_blank">
-                Get Directions ↗
+<a class="w-full inline-block text-center py-2.5 text-sm font-bold rounded-lg bg-amber-100 text-[#0F3D2E] border border-amber-300 hover:bg-amber-200 transition" href="https://www.google.com/maps/search/Opposite+Viswanadha+Garden+JPN+Nagar+Miyapur+Hyderabad+500049" rel="noopener noreferrer" target="_blank">
+                Get directions ↗
               </a>
 </div>
 </div>
@@ -755,8 +765,8 @@
 </div>
 </div>
 <div class="pt-6 mt-6 border-t border-stone-100">
-<a class="w-full inline-block text-center py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg bg-emerald-50 text-[#0F3D2E] border border-emerald-300 hover:bg-emerald-100 transition" href="https://www.google.com/maps/search/Near+RDB+Coconut+Grove+Apartments+Opposite+HDFC+Bank+Line+Mayuri+Nagar+Miyapur+Hyderabad+500049" rel="noopener noreferrer" target="_blank">
-                Get Directions ↗
+<a class="w-full inline-block text-center py-2.5 text-sm font-bold rounded-lg bg-amber-100 text-[#0F3D2E] border border-amber-300 hover:bg-amber-200 transition" href="https://www.google.com/maps/search/Near+RDB+Coconut+Grove+Apartments+Opposite+HDFC+Bank+Line+Mayuri+Nagar+Miyapur+Hyderabad+500049" rel="noopener noreferrer" target="_blank">
+                Get directions ↗
               </a>
 </div>
 </div>
@@ -792,7 +802,7 @@
 </div>
 <!-- Bulk & Event Catering -->
 <div class="space-y-3">
-<h4 class="text-sm font-bold text-white uppercase tracking-wider">Special Occasions</h4>
+<h4 class="text-sm font-bold text-white">Special occasions</h4>
 <p class="text-xs text-stone-400 leading-relaxed">
             Planning a traditional family ceremony, corporate wellness breakfast, or community gathering? We offer fresh hot live millet counters.
           </p>

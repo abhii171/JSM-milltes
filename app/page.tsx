@@ -12,12 +12,15 @@ const navItems = [
 ];
 
 const menuCards = [
-  { title: 'Crispy Ghee Ragi Dosa', price: '₹30', tag: 'Chef’s Favorite', description: 'Slow-fermented finger millet batter with pure desi ghee, peanut chutney, and red chili podi.', accent: 'gold' },
-  { title: 'Onion Ragi Utappam', price: '₹70', tag: 'Best Seller', description: 'Soft-centered ragi pancake layered with onions, green chilies, curry leaves, and roasted cumin.', accent: 'green' },
-  { title: 'Mung Sprout Garelu', price: '₹50', tag: 'Protein Power', description: 'Crisp, freshly sprouted moong vadalu served with ginger allam chutney.', accent: 'gold' },
-  { title: 'Millet Ponganalu', price: '₹40', tag: 'Low Oil', description: 'Crispy outer crust, soft center, with coriander, onion, and mustard seeds.', accent: 'green' },
-  { title: 'Ragi Mudda & Pulusu', price: '₹80', tag: 'Traditional', description: 'Steamed finger millet served with country-style curry and warm ghee.', accent: 'gold' },
-  { title: 'Foxtail Millet Pongal', price: '₹50', tag: 'Comfort Food', description: 'Slow-cooked foxtail millet with moong dal, pepper, cashew, and the aroma of ghee.', accent: 'green' },
+  { title: 'Crispy Ghee Ragi Dosa', price: '₹30', tag: 'Chef’s Favorite', description: 'Slow-fermented finger millet batter with pure desi ghee, peanut chutney, and red chili podi.', accent: 'gold', image: '/images/menu/crispy-ghee-ragi-dosa.png', imageAlt: 'Crispy ghee ragi dosa served on a banana leaf with chutneys' },
+  { title: 'Onion Ragi Utappam', price: '₹70', tag: 'Best Seller', description: 'Soft-centered ragi pancake layered with onions, green chilies, curry leaves, and roasted cumin.', accent: 'green', image: '/images/menu/onion-ragi-utappam.jpeg', imageAlt: 'Onion ragi utappam with podi' },
+  { title: 'Mung Sprout Garelu', price: '₹50', tag: 'Protein Power', description: 'Crisp, freshly sprouted moong vadalu served with ginger allam chutney.', accent: 'gold', image: '/images/menu/mung-sprout-garelu.jpeg', imageAlt: 'Crispy mung sprout garelu served with chutney' },
+  { title: 'Millet Ponganalu', price: '₹40', tag: 'Low Oil', description: 'Crispy outer crust, soft center, with coriander, onion, and mustard seeds.', accent: 'green', image: '/images/menu/crispy-millet-ponganalu.jpeg', imageAlt: 'Millet ponganalu served with chutneys' },
+  { title: 'Ragi Mudda & Pulusu', price: '₹80', tag: 'Traditional', description: 'Steamed finger millet served with country-style curry and warm ghee.', accent: 'gold', image: '/images/menu/ragi-mudda-pulusu.jpeg', imageAlt: 'Ragi mudda served with pulusu' },
+  { title: 'Foxtail Millet Pongal', price: '₹50', tag: 'Comfort Food', description: 'Slow-cooked foxtail millet with moong dal, pepper, cashew, and the aroma of ghee.', accent: 'green', image: '/images/menu/foxtail-millet-pongal.jpeg', imageAlt: 'Foxtail millet pongal with cashews' },
+  { title: 'Soft Millet Idly', price: '₹40', tag: 'Freshly Steamed', description: 'Soft and fluffy finger millet idlies, freshly steamed to perfection, served with traditional groundnut chutney, spicy red chili podi and flavorful sambar.', accent: 'green', image: '/images/menu/soft-millet-ragi-idli.png', imageAlt: 'Soft millet idlies served on a banana leaf with chutneys' },
+  { title: 'Crispy Ragi Pasara Dosa', price: '₹40', tag: 'Crispy & Fresh', description: 'Thin and crispy dosa made with wholesome finger millet batter, freshly prepared and roasted to perfection, served with traditional chutney and spicy podi.', accent: 'gold', image: '/images/menu/ragi-pesara-dosa.png', imageAlt: 'Crispy ragi pesara dosa served with chutneys' },
+  { title: 'Traditional Ragi Ambali', price: '₹20', tag: 'Naturally Fermented', description: 'A refreshing traditional finger millet drink, naturally fermented and blended to a smooth consistency, served cool with a light, wholesome and nourishing taste.', accent: 'green', image: '/images/menu/ragi-ambali.jpeg', imageAlt: 'Traditional ragi ambali garnished with herbs' },
 ];
 
 const whyList = [
@@ -102,6 +105,7 @@ export default function Home() {
             type="button"
             className="mobile-menu-toggle"
             aria-expanded={menuOpen}
+            aria-controls="mobile-nav-panel"
             aria-label="Toggle navigation"
             onClick={() => setMenuOpen((prev) => !prev)}
           >
@@ -111,7 +115,7 @@ export default function Home() {
         </div>
 
         {menuOpen && (
-          <nav className="mobile-nav" aria-label="Mobile navigation">
+          <nav id="mobile-nav-panel" className="mobile-nav" aria-label="Mobile navigation">
             {navItems.map((item) => (
               <a key={item.href} href={item.href} onClick={() => setMenuOpen(false)}>{item.label}</a>
             ))}
@@ -157,12 +161,12 @@ export default function Home() {
             <div className="hero-visual reveal">
               <div className="visual-glow" />
               <div className="dish-card">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNlR0iWQplPwLOYp51kQMhpJ9J5cT8fw9QldYlDRO_lh-zR8JYJPLLmuLCUJCL0nPx8dLMNCq-nzIdwM9GA6YjLSeTQ8dbhjWwj-epEjJVv-7r0x6EWRpsYfny1T7UiOYKSXQiTF18Bp6naSbwUWAD83a0cyzhdUjd-dcI8s3xUDD2hzuT9U6FPsp767BWSmZP0aRJ5okJfbgFfLmN2LiKmH7Ksj535jf0Epa5cn2QeXroiAKmN2zT4yvUcxTlmks49g" alt="Ragi dosa" />
+                <img src="/images/menu/crispy-ghee-ragi-dosa.png" alt="Crispy ghee ragi dosa served on a banana leaf with chutneys" />
                 <div className="dish-overlay">
                   <div className="overlay-top">
                     <div>
-                      <p>Signature Serving</p>
-                      <h3>Crisp Ghee Ragi Dosa</h3>
+                      <p>Signature serving</p>
+                      <h2>Crisp Ghee Ragi Dosa</h2>
                     </div>
                     <span>₹30</span>
                   </div>
@@ -240,9 +244,9 @@ export default function Home() {
               {menuCards.map((item) => (
                 <article key={item.title} className={`menu-card ${item.accent}`}>
                   <div className="menu-visual">
+                    <img className="menu-photo" src={item.image} alt={item.imageAlt} />
                     <span className="price-tag">{item.price}</span>
                     <span className="item-badge">{item.tag}</span>
-                    <div className="menu-icon">{item.accent === 'gold' ? '🌾' : '🍲'}</div>
                   </div>
                   <div className="menu-content">
                     <h3>{item.title}</h3>
@@ -302,7 +306,7 @@ export default function Home() {
                       <strong>{location.evening}</strong>
                     </div>
                   </div>
-                  <a href={location.maps} target="_blank" rel="noreferrer" className="direction-btn">Get Directions ↗</a>
+                  <a href={location.maps} target="_blank" rel="noreferrer" className="direction-btn">Get directions ↗</a>
                 </article>
               ))}
             </div>

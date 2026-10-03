@@ -14,8 +14,20 @@
   --shadow: rgba(12, 30, 22, 0.18);
 }
 
+.hero .eyebrow {
+  border-color: rgba(15,61,46,0.12);
+  background: rgba(229,169,30,0.16);
+  color: var(--forest);
+}
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 6rem;
 }
 
 * {
@@ -66,7 +78,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 86px;
+  min-height: 106px;
   position: relative;
 }
 
@@ -77,8 +89,8 @@ button {
 }
 
 .brand img {
-  width: 52px;
-  height: 52px;
+  width: 78px;
+  height: 78px;
   border-radius: 14px;
   object-fit: cover;
   box-shadow: 0 0 0 2px rgba(229, 169, 30, 0.45);
@@ -294,7 +306,7 @@ button {
 .stats-row strong {
   display: block;
   font-size: clamp(1.8rem, 2vw, 2.4rem);
-  color: var(--gold);
+  color: var(--forest);
 }
 
 .stats-row span {
@@ -348,13 +360,13 @@ button {
 
 .dish-overlay {
   position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
   background: rgba(15,61,46,0.92);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 18px;
-  padding: 18px 20px;
+  padding: 14px 16px;
   backdrop-filter: blur(8px);
 }
 
@@ -367,14 +379,12 @@ button {
 
 .overlay-top p {
   margin: 0 0 6px;
-  color: #f0d484;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  color: var(--gold);
   font-size: 0.68rem;
   font-weight: 700;
 }
 
-.overlay-top h3 {
+.overlay-top h2 {
   margin: 0;
   font-size: 1.2rem;
   color: var(--white);
@@ -570,10 +580,11 @@ button {
   display: inline-block;
   background: rgba(229,169,30,0.1);
   color: #8b5d00;
-  font-size: 0.7rem;
+  min-height: 40px;
+  font-size: 0.88rem;
   font-weight: 800;
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 10px 16px;
 }
 
 .menu {
@@ -611,14 +622,33 @@ button {
 .menu-visual {
   position: relative;
   height: 230px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
-.menu-icon {
-  font-size: 4.2rem;
-  filter: drop-shadow(0 18px 30px rgba(0,0,0,0.14));
+.menu-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-photo {
+  transform: scale(1.05);
+}
+
+.menu-visual::after {
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.32));
+  content: "";
+  pointer-events: none;
+}
+
+.menu-visual .price-tag,
+.menu-visual .item-badge {
+  z-index: 1;
 }
 
 .price-tag {
@@ -741,7 +771,7 @@ button {
 
 .location-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
 }
 
@@ -830,14 +860,12 @@ button {
 .direction-btn {
   margin-top: 20px;
   width: 100%;
-  background: rgba(15,61,46,0.06);
+  background: rgba(229,169,30,0.14);
   color: var(--forest);
-  border: 1px solid rgba(15,61,46,0.18);
-  padding: 12px 16px;
-  font-size: 0.76rem;
+  border: 1px solid rgba(229,169,30,0.45);
+  padding: 13px 16px;
+  font-size: 0.88rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .footer {
@@ -978,6 +1006,15 @@ button {
 
   .mobile-menu-toggle {
     display: inline-flex;
+  }
+
+  .topbar-inner {
+    min-height: 88px;
+  }
+
+  .brand img {
+    width: 64px;
+    height: 64px;
   }
 
   .hero-grid,
