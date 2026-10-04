@@ -12,6 +12,13 @@
   --stone-200: #e7dfd4;
   --white: #ffffff;
   --shadow: rgba(12, 30, 22, 0.18);
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
 }
 
 .hero .eyebrow {
@@ -91,7 +98,7 @@ button {
 .brand img {
   width: 78px;
   height: 78px;
-  border-radius: 14px;
+  border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 0 0 2px rgba(229, 169, 30, 0.45);
   transition: transform 0.4s ease;
@@ -104,15 +111,15 @@ button {
 .brand-title {
   display: block;
   color: var(--white);
-  font-size: 1.15rem;
+  font-size: var(--text-lg);
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 .brand-subtitle {
   display: block;
-  color: #f2d58c;
-  font-size: 0.65rem;
+  color: var(--gold);
+  font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-top: 2px;
@@ -126,7 +133,7 @@ button {
 
 .desktop-nav a {
   color: rgba(255,255,255,0.75);
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -165,7 +172,7 @@ button {
 
 .primary-btn {
   background: linear-gradient(135deg, var(--gold) 0%, #f3c64d 100%);
-  color: var(--forest-deep);
+  color: var(--forest);
   padding: 14px 24px;
   font-weight: 800;
   box-shadow: 0 16px 30px rgba(229, 169, 30, 0.25);
@@ -197,7 +204,7 @@ button {
   color: var(--white);
   border-radius: 999px;
   padding: 10px 14px;
-  font-size: 0.72rem;
+  font-size: var(--text-xs);
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -243,9 +250,9 @@ button {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
-  gap: 46px;
+  gap: clamp(24px, 3vw, 40px);
 }
 
 .eyebrow {
@@ -255,8 +262,8 @@ button {
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.22);
   background: rgba(6, 27, 20, 0.45);
-  color: #f5d790;
-  font-size: 0.7rem;
+  color: var(--gold);
+  font-size: var(--text-xs);
   font-weight: 800;
   letter-spacing: 0.12em;
   padding: 10px 16px;
@@ -266,7 +273,9 @@ button {
 .eyebrow-dark {
   background: rgba(10, 42, 31, 0.08);
   border-color: rgba(15,61,46,0.12);
-  color: var(--forest-soft);
+  color: var(--forest);
+  text-transform: none;
+  letter-spacing: 0.04em;
 }
 
 .hero-copy h1 {
@@ -284,8 +293,8 @@ button {
 
 .hero-copy p {
   max-width: 620px;
-  color: rgba(255,255,255,0.82);
-  font-size: 1.12rem;
+  color: rgba(255,255,255,0.75);
+  font-size: var(--text-lg);
   line-height: 1.8;
 }
 
@@ -305,17 +314,17 @@ button {
 
 .stats-row strong {
   display: block;
-  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  font-size: var(--text-2xl);
   color: var(--forest);
 }
 
 .stats-row span {
   margin-top: 2px;
   display: block;
-  font-size: 0.7rem;
+  font-size: var(--text-xs);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.75);
 }
 
 .cta-row {
@@ -365,7 +374,7 @@ button {
   bottom: 14px;
   background: rgba(15,61,46,0.92);
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 14px 16px;
   backdrop-filter: blur(8px);
 }
@@ -380,26 +389,26 @@ button {
 .overlay-top p {
   margin: 0 0 6px;
   color: var(--gold);
-  font-size: 0.68rem;
+  font-size: var(--text-xs);
   font-weight: 700;
 }
 
 .overlay-top h2 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: var(--text-xl);
   color: var(--white);
 }
 
 .overlay-top span {
   color: var(--gold);
-  font-size: 1.4rem;
+  font-size: var(--text-2xl);
   font-weight: 800;
 }
 
 .dish-overlay > p {
   margin: 8px 0 0;
-  color: rgba(255,255,255,0.78);
-  font-size: 0.76rem;
+  color: rgba(255,255,255,0.75);
+  font-size: var(--text-xs);
   line-height: 1.7;
 }
 
@@ -411,24 +420,28 @@ button {
   display: grid;
   grid-template-columns: 0.96fr 1.04fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
 
 .story-visual {
   position: relative;
+  align-self: start;
 }
 
 .story-image-wrap {
   overflow: hidden;
-  border-radius: 28px;
-  border: 5px solid rgba(255,255,255,0.85);
-  box-shadow: 0 30px 50px rgba(15, 61, 46, 0.12);
+  max-width: 480px;
+  margin: 0 auto;
+  border: 1px solid rgba(15,61,46,0.12);
+  border-radius: 24px;
+  background: var(--white);
+  box-shadow: 0 24px 50px rgba(15, 61, 46, 0.12);
 }
 
 .story-image-wrap img {
   width: 100%;
-  height: 470px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .story-badge {
@@ -438,7 +451,7 @@ button {
   max-width: 220px;
   background: var(--forest);
   color: var(--white);
-  border-radius: 18px;
+  border-radius: 16px;
   padding: 18px 18px 16px;
   box-shadow: 0 20px 35px rgba(15,61,46,0.2);
 }
@@ -446,30 +459,66 @@ button {
 .story-badge strong {
   display: block;
   color: var(--gold);
-  font-size: 2rem;
+  font-size: var(--text-3xl);
   margin-bottom: 5px;
 }
 
 .story-badge span {
   display: block;
-  color: rgba(255,255,255,0.8);
-  font-size: 0.72rem;
+  color: rgba(255,255,255,0.75);
+  font-size: var(--text-xs);
   line-height: 1.7;
 }
 
 .story-copy h2, .section-head h2 {
   margin: 14px 0 0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2.2rem, 3vw, 3.6rem);
+  font-size: clamp(2rem, 3vw, 3.5rem);
   line-height: 1.12;
   color: var(--stone-900);
   letter-spacing: -0.05em;
 }
 
 .story-copy p {
+  margin: 0;
   color: var(--stone-700);
-  line-height: 1.9;
-  font-size: 1.02rem;
+  line-height: 1.75;
+  font-size: var(--text-base);
+}
+
+.story-narrative {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.story-mission {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border: 1px solid rgba(15,61,46,0.1);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.68);
+}
+
+.story-copy h3 {
+  margin: 0 0 8px;
+  color: var(--forest);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: var(--text-2xl);
+}
+
+.story-copy .story-closing {
+  display: grid;
+  gap: 4px;
+  margin-top: 18px;
+  padding: 16px 20px;
+  border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  background: rgba(15, 61, 46, 0.06);
+}
+
+.story-closing span {
+  color: var(--forest);
 }
 
 .mini-facts {
@@ -496,11 +545,24 @@ button {
 }
 
 .categories {
+  padding: 32px;
+  background: #171717;
+}
+
+.categories > .container {
+  width: 100%;
+  max-width: none;
+  padding: 56px clamp(24px, 4vw, 64px) 60px;
+  border-radius: 24px;
   background: #f3ebd8;
 }
 
 .section-head {
   margin-bottom: 34px;
+}
+
+.categories .section-head {
+  margin-bottom: 8px;
 }
 
 .section-head.center {
@@ -515,7 +577,7 @@ button {
 }
 
 .section-head h2 {
-  font-size: clamp(2.1rem, 2.5vw, 3.1rem);
+  font-size: clamp(2rem, 3vw, 3.5rem);
 }
 
 .pill {
@@ -525,7 +587,7 @@ button {
   border-radius: 999px;
   background: rgba(229,169,30,0.12);
   color: var(--forest);
-  font-size: 0.72rem;
+  font-size: var(--text-xs);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -534,17 +596,17 @@ button {
 .category-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 
 .category-card {
-  background: rgba(255,255,255,0.58);
+  background: var(--white);
   border: 1px solid rgba(15,61,46,0.1);
   border-top: 4px solid var(--forest);
   border-radius: 20px;
-  padding: 24px 18px;
+  padding: 28px 16px 24px;
   text-align: center;
-  box-shadow: 0 10px 18px rgba(15, 61, 46, 0.05);
+  box-shadow: 0 4px 10px rgba(15, 61, 46, 0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -554,37 +616,70 @@ button {
 }
 
 .icon-wrap {
-  width: 56px;
-  height: 56px;
+  width: 68px;
+  height: 68px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 17px;
-  background: rgba(15,61,46,0.06);
-  font-size: 1.7rem;
+  border-radius: 50%;
+  background: #e4f7ef;
+  font-size: var(--text-2xl);
 }
 
 .category-card h3 {
   margin: 16px 0 10px;
-  font-size: 1.08rem;
+  font-size: var(--text-xl);
 }
 
 .category-card p {
   margin: 0 0 18px;
   color: var(--stone-500);
-  font-size: 0.76rem;
+  font-size: var(--text-sm);
   line-height: 1.7;
 }
 
 .category-card span {
   display: inline-block;
   background: rgba(229,169,30,0.1);
-  color: #8b5d00;
-  min-height: 40px;
-  font-size: 0.88rem;
+  color: var(--forest);
+  min-height: 54px;
+  font-size: var(--text-lg);
   font-weight: 800;
   border-radius: 999px;
-  padding: 10px 16px;
+  padding: 12px 20px;
+}
+
+.category-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 56px;
+  margin-top: 14px;
+  padding: 8px 14px;
+  border: 1px solid rgba(15,61,46,0.2);
+  border-radius: 999px;
+  color: var(--forest);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.category-link::after {
+  content: "→";
+}
+
+.category-link:hover,
+.category-link:focus-visible {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--white);
+}
+
+.category-link:focus-visible,
+.whatsapp-float:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
 }
 
 .menu {
@@ -599,7 +694,7 @@ button {
 
 .menu-card {
   border: 1px solid rgba(17, 24, 39, 0.08);
-  border-radius: 26px;
+  border-radius: 20px;
   overflow: hidden;
   background: var(--white);
   box-shadow: 0 18px 32px rgba(15,61,46,0.04);
@@ -656,11 +751,11 @@ button {
   right: 16px;
   top: 16px;
   background: linear-gradient(135deg, var(--gold), #f5c85b);
-  color: var(--forest-deep);
+  color: var(--forest);
   padding: 8px 12px;
   border-radius: 999px;
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   box-shadow: 0 10px 24px rgba(229,169,30,0.22);
 }
 
@@ -672,7 +767,7 @@ button {
   border-radius: 999px;
   background: rgba(15,61,46,0.75);
   color: var(--white);
-  font-size: 0.65rem;
+  font-size: var(--text-xs);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -684,7 +779,7 @@ button {
 
 .menu-content h3 {
   margin: 0;
-  font-size: 1.36rem;
+  font-size: var(--text-xl);
   font-family: Georgia, 'Times New Roman', serif;
   color: var(--stone-900);
 }
@@ -693,7 +788,7 @@ button {
   margin: 12px 0 0;
   color: var(--stone-500);
   line-height: 1.8;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .menu-meta {
@@ -703,36 +798,55 @@ button {
   border-top: 1px solid rgba(17,24,39,0.08);
   margin-top: 18px;
   padding-top: 16px;
-  font-size: 0.72rem;
+  font-size: var(--text-xs);
   color: var(--stone-500);
 }
 
 .menu-meta strong {
   color: var(--forest);
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
 }
 
 .benefits {
-  background: var(--forest);
+  padding: 32px;
+  background: #171717;
   color: var(--white);
+}
+
+.benefits > .benefit-panel {
+  width: 100%;
+  max-width: none;
+  padding: 48px 28px 56px;
+  border-radius: 24px;
+  background: var(--forest);
+}
+
+.benefits .section-head {
+  margin-bottom: 32px;
 }
 
 .benefits .section-head h2 {
   color: var(--white);
 }
 
+.benefits .benefit-title {
+  font-size: clamp(2rem, 3.2vw, 3.5rem);
+  white-space: nowrap;
+}
+
 .benefit-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 12px;
+  gap: 24px;
+  margin-top: 0;
 }
 
 .benefit-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
+  min-height: 300px;
+  background: rgba(3, 45, 32, 0.72);
+  border: 1px solid rgba(20, 115, 82, 0.62);
   border-radius: 20px;
-  padding: 26px 18px;
+  padding: 28px 20px;
   text-align: center;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -743,26 +857,26 @@ button {
 }
 
 .benefit-icon {
-  width: 52px;
-  height: 52px;
+  width: 72px;
+  height: 72px;
   border-radius: 16px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: var(--text-2xl);
   background: rgba(229,169,30,0.12);
 }
 
 .benefit-card h3 {
-  margin: 16px 0 10px;
-  font-size: 1.02rem;
+  margin: 24px 0 16px;
+  font-size: var(--text-xl);
 }
 
 .benefit-card p {
   margin: 0;
-  color: rgba(255,255,255,0.7);
-  font-size: 0.77rem;
-  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+  font-size: var(--text-base);
+  line-height: 1.6;
 }
 
 .locations {
@@ -781,7 +895,7 @@ button {
   justify-content: space-between;
   background: rgba(255,255,255,0.84);
   border: 1px solid rgba(17,24,39,0.08);
-  border-radius: 24px;
+  border-radius: 20px;
   padding: 26px 22px;
   box-shadow: 0 18px 30px rgba(15,61,46,0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -801,14 +915,14 @@ button {
 
 .location-header h3 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: var(--text-2xl);
   color: var(--forest);
 }
 
 .loc-tag {
   padding: 6px 10px;
   border-radius: 999px;
-  font-size: 0.62rem;
+  font-size: var(--text-xs);
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -821,13 +935,13 @@ button {
 
 .tag-gold {
   background: rgba(229,169,30,0.14);
-  color: #7e5100;
+  color: var(--forest);
 }
 
 .location-address {
   margin: 18px 0 0;
   color: var(--stone-500);
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   line-height: 1.7;
 }
 
@@ -845,7 +959,7 @@ button {
   align-items: center;
   gap: 12px;
   color: var(--stone-700);
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
 }
 
 .hours span {
@@ -859,18 +973,21 @@ button {
 
 .direction-btn {
   margin-top: 20px;
-  width: 100%;
+  width: fit-content;
+  min-height: 44px;
+  align-self: center;
+  text-align: center;
   background: rgba(229,169,30,0.14);
   color: var(--forest);
   border: 1px solid rgba(229,169,30,0.45);
   padding: 13px 16px;
-  font-size: 0.88rem;
+  font-size: var(--text-sm);
   font-weight: 800;
 }
 
 .footer {
   background: #0a2a1f;
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.75);
   padding-top: 72px;
   padding-bottom: 36px;
 }
@@ -885,7 +1002,7 @@ button {
 
 .footer-brand img {
   width: 90px;
-  border-radius: 18px;
+  border-radius: 16px;
 }
 
 .footer-brand p,
@@ -893,22 +1010,21 @@ button {
 .footer-grid p,
 .footer-grid li,
 .footer-grid a {
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
   line-height: 1.8;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.75);
 }
 
 .footer-brand strong {
   display: inline-block;
   margin-top: 8px;
-  color: #f1d98a;
+  color: var(--gold);
 }
 
 .footer-grid h4 {
   margin: 0 0 18px;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
   color: var(--white);
 }
 
@@ -922,8 +1038,8 @@ button {
 
 .footer-phone {
   margin-top: 18px;
-  color: #f1d98a;
-  font-size: 1.1rem;
+  color: var(--gold);
+  font-size: var(--text-lg);
   font-weight: 800;
 }
 
@@ -933,10 +1049,10 @@ button {
   margin-top: 12px;
   background: rgba(15,61,46,0.8);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 14px 16px;
-  color: rgba(255,255,255,0.82);
-  font-size: 0.78rem;
+  color: rgba(255,255,255,0.75);
+  font-size: var(--text-xs);
 }
 
 .footer-bottom {
@@ -944,8 +1060,8 @@ button {
   justify-content: space-between;
   gap: 16px;
   padding-top: 22px;
-  color: rgba(255,255,255,0.64);
-  font-size: 0.78rem;
+  color: rgba(255,255,255,0.75);
+  font-size: var(--text-xs);
 }
 
 .whatsapp-float {
@@ -953,12 +1069,18 @@ button {
   right: 26px;
   bottom: 26px;
   z-index: 40;
-  background: linear-gradient(135deg, #19b66a, #0f9d5e);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  background: var(--forest);
   color: var(--white);
-  padding: 14px 18px;
+  padding: 10px 14px;
+  border: 1px solid rgba(229,169,30,0.55);
   border-radius: 999px;
-  box-shadow: 0 18px 32px rgba(25, 182, 106, 0.28);
+  box-shadow: 0 10px 20px rgba(12, 30, 22, 0.2);
   font-weight: 800;
+  font-size: var(--text-xs);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -966,7 +1088,7 @@ button {
 
 .whatsapp-float:hover {
   transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 24px 38px rgba(25, 182, 106, 0.34);
+  box-shadow: 0 14px 24px rgba(12, 30, 22, 0.25);
 }
 
 .reveal {
@@ -1025,6 +1147,26 @@ button {
 
   .section-shell {
     padding: 72px 0;
+  }
+
+  .benefits {
+    padding: 16px;
+  }
+
+  .benefits > .benefit-panel {
+    padding: 40px 20px;
+  }
+
+  .benefits .benefit-title {
+    white-space: normal;
+  }
+
+  .categories {
+    padding: 16px;
+  }
+
+  .categories > .container {
+    padding: 40px 20px;
   }
 
   .story-badge {

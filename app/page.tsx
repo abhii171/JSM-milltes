@@ -12,21 +12,23 @@ const navItems = [
 ];
 
 const menuCards = [
-  { title: 'Crispy Ghee Ragi Dosa', price: '₹30', tag: 'Chef’s Favorite', description: 'Slow-fermented finger millet batter with pure desi ghee, peanut chutney, and red chili podi.', accent: 'gold', image: '/images/menu/crispy-ghee-ragi-dosa.png', imageAlt: 'Crispy ghee ragi dosa served on a banana leaf with chutneys' },
-  { title: 'Onion Ragi Utappam', price: '₹70', tag: 'Best Seller', description: 'Soft-centered ragi pancake layered with onions, green chilies, curry leaves, and roasted cumin.', accent: 'green', image: '/images/menu/onion-ragi-utappam.jpeg', imageAlt: 'Onion ragi utappam with podi' },
-  { title: 'Mung Sprout Garelu', price: '₹50', tag: 'Protein Power', description: 'Crisp, freshly sprouted moong vadalu served with ginger allam chutney.', accent: 'gold', image: '/images/menu/mung-sprout-garelu.jpeg', imageAlt: 'Crispy mung sprout garelu served with chutney' },
-  { title: 'Millet Ponganalu', price: '₹40', tag: 'Low Oil', description: 'Crispy outer crust, soft center, with coriander, onion, and mustard seeds.', accent: 'green', image: '/images/menu/crispy-millet-ponganalu.jpeg', imageAlt: 'Millet ponganalu served with chutneys' },
-  { title: 'Ragi Mudda & Pulusu', price: '₹80', tag: 'Traditional', description: 'Steamed finger millet served with country-style curry and warm ghee.', accent: 'gold', image: '/images/menu/ragi-mudda-pulusu.jpeg', imageAlt: 'Ragi mudda served with pulusu' },
-  { title: 'Foxtail Millet Pongal', price: '₹50', tag: 'Comfort Food', description: 'Slow-cooked foxtail millet with moong dal, pepper, cashew, and the aroma of ghee.', accent: 'green', image: '/images/menu/foxtail-millet-pongal.jpeg', imageAlt: 'Foxtail millet pongal with cashews' },
-  { title: 'Soft Millet Idly', price: '₹40', tag: 'Freshly Steamed', description: 'Soft and fluffy finger millet idlies, freshly steamed to perfection, served with traditional groundnut chutney, spicy red chili podi and flavorful sambar.', accent: 'green', image: '/images/menu/soft-millet-ragi-idli.png', imageAlt: 'Soft millet idlies served on a banana leaf with chutneys' },
-  { title: 'Crispy Ragi Pasara Dosa', price: '₹40', tag: 'Crispy & Fresh', description: 'Thin and crispy dosa made with wholesome finger millet batter, freshly prepared and roasted to perfection, served with traditional chutney and spicy podi.', accent: 'gold', image: '/images/menu/ragi-pesara-dosa.png', imageAlt: 'Crispy ragi pesara dosa served with chutneys' },
-  { title: 'Traditional Ragi Ambali', price: '₹20', tag: 'Naturally Fermented', description: 'A refreshing traditional finger millet drink, naturally fermented and blended to a smooth consistency, served cool with a light, wholesome and nourishing taste.', accent: 'green', image: '/images/menu/ragi-ambali.jpeg', imageAlt: 'Traditional ragi ambali garnished with herbs' },
+  { title: 'Ragi Java', price: '₹20', tag: 'Naturally Fermented', description: 'A refreshing traditional ragi drink, served cool.', accent: 'green', image: '/images/menu/ragi-ambali.jpeg', imageAlt: 'Traditional ragi java served chilled' },
+  { title: 'Ragi Crispy Plain Dosa', price: '₹30', tag: 'Crispy & Fresh', description: 'Thin, crispy ragi dosa served with traditional chutney and podi.', accent: 'gold', image: '/images/menu/ragi-pesara-dosa.png', imageAlt: 'Crispy plain ragi dosa served with chutneys' },
+  { title: 'Soft Ragi Idly', price: '₹40', tag: 'Freshly Steamed', description: 'Soft, fluffy ragi idlies served with traditional chutney and podi.', accent: 'green', image: '/images/menu/soft-millet-ragi-idli.png', imageAlt: 'Soft ragi idlies served with chutneys' },
+  { title: 'Foxtail Pongal', price: '₹40', tag: 'Comfort Food', description: 'Warm foxtail millet pongal cooked with lentils and traditional spices.', accent: 'green', image: '/images/menu/foxtail-millet-pongal.jpeg', imageAlt: 'Foxtail millet pongal served warm' },
+  { title: 'Crispy Millet Ponganalu', price: '₹40', tag: 'Traditional Cast-Iron', description: 'Crispy millet ponganalu with a soft center and savory seasoning.', accent: 'gold', image: '/images/menu/crispy-millet-ponganalu.jpeg', imageAlt: 'Crispy millet ponganalu served with chutneys' },
+  { title: 'Crispy Sprouts Garelu', price: '₹50', tag: 'Protein Power', description: 'Crispy sprouted moong garelu served with ginger chutney.', accent: 'gold', image: '/images/menu/mung-sprout-garelu.jpeg', imageAlt: 'Crispy sprouts garelu served with chutney' },
+  { title: 'Pesara Dosa', price: '₹50', tag: 'Crispy & Fresh', description: 'A crisp pesara dosa served with traditional chutney and podi.', accent: 'green', image: '/images/menu/ragi-pesara-dosa.jpeg', imageAlt: 'Pesara dosa served with chutneys' },
+  { title: 'Onion Ragi Uttappam', price: '₹60', tag: 'Best Seller', description: 'A soft-centered ragi uttappam topped with onion and traditional spices.', accent: 'gold', image: '/images/menu/onion-ragi-utappam.jpeg', imageAlt: 'Onion ragi uttappam served with podi' },
+  { title: 'Millet Set Dosa', price: '₹70', tag: 'Soft & Fluffy', description: 'Soft millet set dosa served with traditional accompaniments.', accent: 'green', image: '/images/menu/crispy-ghee-ragi-dosa.jpeg', imageAlt: 'Millet dosa served on a banana leaf with chutneys' },
+  { title: 'Ragi Mudda Chicken', price: '₹120', tag: 'Traditional Meal', description: 'Ragi mudda served with chicken curry.', accent: 'gold', image: '/images/menu/ragi-mudda-pulusu.jpeg', imageAlt: 'Ragi mudda served with curry' },
+  { title: 'Ragi Mudda Thalakaya', price: '₹150', tag: 'Traditional Meal', description: 'Ragi mudda served with thalakaya curry.', accent: 'green', image: '/images/menu/ragi-mudda-pulusu.jpeg', imageAlt: 'Ragi mudda served with curry' },
 ];
 
 const whyList = [
-  { icon: '🌱', title: '100% Millets & Ragi', text: 'No refined maida, zero palm oil, and zero adulteration. Truly traditional grain ratios.' },
-  { icon: '☀️', title: 'Fresh Daily Prep', text: 'Batters and stone-ground chutneys refreshed each morning with fresh ingredients.' },
-  { icon: '🧈', title: 'Pure Desi Ghee', text: 'Sourced directly from trusted dairy sources for rich flavor and better nourishment.' },
+  { icon: '🌱', title: '100% Millets & Ragi', text: 'With healthy and quality ingredients. No maida, palm oil, or added food colours.' },
+  { icon: '☀️', title: 'Fresh Daily Prep', text: 'Batters and stone-ground chutneys ground fresh every single dawn. No overnight preservatives.' },
+  { icon: '🧈', title: 'Pure Desi Ghee', text: 'Authentic food prepared with pure desi ghee, pure sunflower oil, and homemade chutneys.' },
   { icon: '📍', title: 'Multiple Outlets', text: 'Serving the Miyapur community from JPN Nagar and Mayuri Nagar.' },
   { icon: '🌾', title: 'Heritage Recipes', text: 'Rustic Andhra and Rayalaseema flavours preserved in every hot plate served.' },
 ];
@@ -57,7 +59,7 @@ const categories = [
   { icon: '🥣', title: 'Millet Specials', price: 'Starts ₹45', text: 'Foxtail, Kodo, and Little millet pongal, upma, and seasonal tiffins.' },
   { icon: '🥞', title: 'Traditional Tiffins', price: 'Starts ₹50', text: 'Cast-iron grilled multigrain utappam, pesarattu, and savory roasted crêpes.' },
   { icon: '🧆', title: 'Garelu & Snacks', price: 'Starts ₹40', text: 'Hot crunchy sprouted green gram garelu and spiced shallow-fried punugulu.' },
-  { icon: '🍲', title: 'Sangati & Java', price: 'Starts ₹40', text: 'Wholesome Ragi Mudda served with dal pulusu and cooling Java.' },
+  { icon: '🍲', title: 'Sangati & Java', price: 'Starts ₹40', text: 'Wholesome Rayalaseema Ragi Muddha served with spicy natukodi or dal pulusu & cooling java.' },
 ];
 
 export default function Home() {
@@ -128,27 +130,27 @@ export default function Home() {
           <div className="hero-bg" />
           <div className="container hero-grid">
             <div className="hero-copy reveal">
-              <span className="eyebrow">Authentic Millet Delicacies • Hyderabad</span>
+              <span className="eyebrow"><span>Best Millet Tiffins in Hyderabad<br /><span lang="te">మేము పెట్టుకున్నది కాదు, మీరు ఇచ్చింది.</span></span></span>
               <h1>
-                Traditional Taste.<br />
-                <span>Naturally Good.</span>
+                Quality you can taste.<br />
+                <span>Hygiene you can trust.</span>
               </h1>
               <p>
-                Authentic Ragi &amp; Millet Tiffins in Hyderabad. Freshly made on traditional banana leaves with pure desi ghee, stone-ground podis, and artisanal chutneys.
+                JSM Millet Tiffins and Ragimuddha, Hyderabad, is a food brand dedicated to bringing the goodness of traditional millet-based food into modern everyday life. We also preserve the traditional experience—serving our food on steel plates with banana leaves, groundnut and tomato chutneys, and karampodi.
               </p>
 
               <div className="stats-row">
                 <div>
                   <strong>100%</strong>
-                  <span>Millets &amp; Ragi</span>
+                  <span>Millets &amp; Ragi - 100% No maida, no palm oil and food colour</span>
                 </div>
                 <div>
                   <strong>Pure</strong>
-                  <span>Desi Ghee</span>
+                  <span>Desi Ghee - Pure Sunflower Oil, Homemade</span>
                 </div>
                 <div>
-                  <strong>₹30</strong>
-                  <span>Starting from</span>
+                  <strong>₹20</strong>
+                  <span>Starting From</span>
                 </div>
               </div>
 
@@ -168,7 +170,7 @@ export default function Home() {
                       <p>Signature serving</p>
                       <h2>Crisp Ghee Ragi Dosa</h2>
                     </div>
-                    <span>₹30</span>
+                    <span>₹20</span>
                   </div>
                   <p>Served with groundnut chutney, tomato paste and gun powder.</p>
                 </div>
@@ -181,31 +183,43 @@ export default function Home() {
           <div className="container story-grid">
             <div className="story-visual">
               <div className="story-image-wrap">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeEJoHRFtGfewxBTx6QdNv1XHQgqrZpgdzuGfQwhU-QyvAa1GiYawbjNSm6jKFXDWQefUsWBPnzu7IZB0VY8xjwIeII_uSlxsSVK_jlTKTvqjMK70BXEavy3TAyFG8NSQDrLeZMRwhhC3xsSJQYOaYROoCrPOOHZe0Cm0R83xHSKgIhFjaNIbMZGrq58YWEZCfC4gexqgUMgExMo3CLoNGGPcf1qRPW58feNGkRQoz6yap-b5dZVf_RVXCMlxJ4-wUoA" alt="Authentic millet plate" />
-              </div>
-              <div className="story-badge">
-                <strong>100%</strong>
-                <span>Preservative free &amp; made daily from pure grains</span>
+                <img src="/images/jsm-story-poster.png" alt="JSM Millet Tiffins and Ragimuddha story poster" />
               </div>
             </div>
 
             <div className="story-copy">
-              <span className="eyebrow eyebrow-dark">Our Heritage &amp; Vision</span>
-              <h2>Revitalizing Andhra &amp; Rayalaseema&apos;s ancient millet roots</h2>
-              <p>
-                Founded by Sowjanya and Manoj, JSM was created to make breakfast deeply nutritious, delicious, and accessible without refined flours or artificial colours.
-              </p>
-              <p>
-                Growing up on rustic, wholesome meals of Ragi Sangati, slow-cooked Jowar Rotis, and stone-pounded grain tiffins, they noticed Hyderabad&apos;s mornings were dominated by polished white rice and maida. JSM brings back that heritage in a modern, easy way.
-              </p>
-              <p>
-                Every dish is prepared using slow culinary methods, served clean on fresh banana leaves, drizzled with fragrant farm desi ghee, and complemented by traditional coconut, peanut, and ginger chutneys.
-              </p>
-              <div className="mini-facts">
-                <div><span>Slow Ground</span><small>Nutrient-dense batters</small></div>
-                <div><span>No White Rice</span><small>Pure millet blends</small></div>
-                <div><span>Eco-Friendly</span><small>Banana leaf service</small></div>
+              <span className="eyebrow eyebrow-dark">Our Story</span>
+              <h2>From a family need to a shared journey</h2>
+              <div className="story-narrative">
+                <p>
+                JSM Millet Tiffins &amp; Ragi Mudde started for a simple and personal reason — to support our family during a difficult time, help with their livelihood, and clear their debts.
+                </p>
+                <p>
+                  We started with zero investment, zero experience, and very little knowledge about running a food business. We only had the willingness to learn, work hard, and keep moving forward.
+                </p>
+                <p>
+                  What began as a way to support our family slowly became something much bigger. By God’s grace, today JSM supports more than 10 families who depend on this work for their livelihood.
+                </p>
+                <p>
+                  In just one and a half years, we have served 100+ orders, with our customers consistently giving us 5-star ratings. JSM has also grown to become one of the top-rated millet tiffin options on Google in Hyderabad — something we are truly grateful for.
+                </p>
+                <p>
+                  JSM is not just a business for us. It is our family’s journey, the livelihood of many families, and a reminder that you don’t always need a big investment or years of experience to start something. Sometimes, you just need the courage to begin and the determination to keep going.
+                </p>
+                <p>
+                  We are deeply thankful to every customer who has ordered, supported, shared, reviewed, and encouraged us along the way.
+                </p>
               </div>
+              <div className="story-mission">
+                <h3>Our Mission</h3>
+                <p>
+                  To make traditional millet food accessible, delicious, and affordable for everyday life while staying true to authentic flavours, quality, freshness, and customer satisfaction.
+                </p>
+              </div>
+              <p className="story-closing">
+                From zero investment. Zero experience. Zero knowledge.
+                <span>To a journey supporting more than 10 families.</span>
+              </p>
             </div>
           </div>
         </section>
@@ -220,10 +234,13 @@ export default function Home() {
             <div className="category-grid">
               {categories.map((item) => (
                 <article key={item.title} className="category-card">
-                  <div className="icon-wrap">{item.icon}</div>
+                  <div className="icon-wrap" aria-hidden="true" />
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
                   <span>{item.price}</span>
+                  <a className="category-link" href="#menu">
+                    Explore menu
+                  </a>
                 </article>
               ))}
             </div>
@@ -263,10 +280,10 @@ export default function Home() {
         </section>
 
         <section id="why-jsm" className="benefits section-shell reveal">
-          <div className="container">
+          <div className="container benefit-panel">
             <div className="section-head center">
               <span className="eyebrow">Our Commitment</span>
-              <h2>Why Hyderabad Chooses JSM</h2>
+              <h2 className="benefit-title">Why Hyderabad Chooses JSM</h2>
             </div>
 
             <div className="benefit-grid">
@@ -332,14 +349,14 @@ export default function Home() {
           </div>
 
           <div>
-            <h4>Special Occasions</h4>
+            <h4>Special occasions</h4>
             <p>Planning a family ceremony, wellness breakfast, or office gathering? We offer fresh hot millet counters and takeaway catering.</p>
             <div className="footer-phone">+91 94917 33480</div>
           </div>
 
           <div>
             <h4>Operational Hours</h4>
-            <p>Open 7 days a week across all Hyderabad outlets.</p>
+            <p>Open Monday to Saturday across all Hyderabad outlets.</p>
             <div className="hours-box">
               <span>Morning: 6:30 AM – 12:00 PM</span>
               <span>Evening: 4:30 PM – 10:30 PM</span>
