@@ -125,12 +125,15 @@ export default function Home() {
         )}
       </header>
 
+      <span className="eyebrow hero-badge">
+        <span>Best Millet Tiffins in Hyderabad<br /><span lang="te">మేము పెట్టుకున్నది కాదు, మీరు ఇచ్చింది.</span></span>
+      </span>
+
       <main>
         <section id="home" className="hero">
           <div className="hero-bg" />
           <div className="container hero-grid">
             <div className="hero-copy reveal">
-              <span className="eyebrow"><span>Best Millet Tiffins in Hyderabad<br /><span lang="te">మేము పెట్టుకున్నది కాదు, మీరు ఇచ్చింది.</span></span></span>
               <h1>
                 Quality you can taste.<br />
                 <span>Hygiene you can trust.</span>
